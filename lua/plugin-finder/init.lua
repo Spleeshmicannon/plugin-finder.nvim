@@ -5,7 +5,7 @@ local ui = require("plugin-finder.utils.ui")
 local net = require("plugin-finder.utils.net")
 local active_page = 1
 
-local categories = require("plugin-manager.categories")
+local categories = require("plugin-finder.categories")
 
 local function calculate_dimensions(width_precent, height_precent)
     local width = (vim.o.columns * width_precent) / 100
@@ -108,7 +108,7 @@ function M.setup()
 end
 
 vim.api.nvim_create_user_command(
-    "PluginManager",
+    "PluginFinder",
     function()
         show_ui()
     end,
